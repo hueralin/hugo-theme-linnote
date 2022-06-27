@@ -1,10 +1,83 @@
 <!DOCTYPE html>
-<html lang="{{ .Language.Lang }}">
+<html lang="{{ .Language.Lang }}" class="h-full">
 <head>
     {{ partial "head.html" . }}
 </head>
-<body>
-{{ block "main" . }}{{ end }}
-{{ partial "footer.html" . }}
+<body class="h-full text-gray-600 flex flex-col">
+    {{/*  header  */}}
+    {{/*  <div class="h-12 bg-red-500 flex items-center justify-between">
+        <div class="px-4">
+            <h1 class="text-gray-800 text-xl">LinNote</h1>
+        </div>
+        <div class="flex items-center justify-between px-4">
+            <div>Search</div>
+            <div class="ml-5">Profile</div>
+        </div>
+    </div>  */}}
+    {{/*  main  */}}
+    <div class="flex flex-1">
+        {{/*  sidebar  */}}
+        <div class="bg-gray-800 px-2 py-4 w-48 flex flex-col">
+            {{/*  header  */}}
+            <header class="h-12">
+                <h1 class="text-gray-200 text-xl px-4">Lin Note</h1>
+                {{/*  <img class="w-8 h-8 rounded-full" src="avatar.png" alt="avatar">  */}}
+            </header>
+            {{/*  nav  */}}
+            <nav class="flex-1">
+                <ul>
+                    <li>
+                        <a href="" class="flex items-center px-4 py-2 mb-1 rounded text-gray-400 bg-gray-900 hover:text-gray-400 hover:bg-gray-900">
+                            {{/*  图标  */}}
+                            <span class="ml-2">首页</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="flex items-center px-4 py-2 mb-1 rounded hover:text-gray-400 hover:bg-gray-900">
+                            {{/*  图标  */}}
+                            <span class="ml-2">Web</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="flex items-center px-4 py-2 mb-1 rounded hover:text-gray-400 hover:bg-gray-900">
+                            {{/*  图标  */}}
+                            <span class="ml-2">工具</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="flex items-center px-4 py-2 mb-1 rounded hover:text-gray-400 hover:bg-gray-900">
+                            {{/*  图标  */}}
+                            <span class="ml-2">计算机基础</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="" class="flex items-center px-4 py-2 mb-1 rounded hover:text-gray-400 hover:bg-gray-900">
+                            {{/*  图标  */}}
+                            <span class="ml-2">关于我</span>
+                        </a>
+                    </li>
+                </ul>
+            </nav>
+            <footer class="h-12 text-xs">
+                <p class="mb-1">Powered by Hugo</p>
+                <p class="mb-1">Theme <a href="">LinNote</a></p>
+                <p class="mb-1">备案号</p>
+            </footer>
+        </div>
+        {{/*  目录  */}}
+        <div class="bg-gray-400 p-2 w-64">
+            {{/*  Search  */}}
+            <div>
+                <input type="search" name="" id="">
+            </div>
+            {{/*  目录  */}}
+        </div>
+        {{/*  内容  */}}
+        <div class="p-8">
+            <h1>文章标题</h1>
+        </div>
+    </div>
+{{/*  {{ block "main" . }}{{ end }}
+{{ partial "footer.html" . }}  */}}
 </body>
 </html>
